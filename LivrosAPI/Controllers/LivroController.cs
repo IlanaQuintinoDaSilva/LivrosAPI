@@ -1,6 +1,5 @@
-﻿using BLL;
-using Util;
-using BLL.Interfaces;
+﻿using Util;
+using BLL;
 using LivrosAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,7 @@ namespace LivrosAPI.Controllers
     [RoutePrefix("api/livros")]
     public class LivroController: ApiController
     {
-        private readonly ILivroBLL _livroBLL = new LivroBLL();
+        private LivroBLL _livroBLL = new LivroBLL();
         private Retorno _resultado = new Retorno();
 
         [HttpGet, Route("ListaLivros")]

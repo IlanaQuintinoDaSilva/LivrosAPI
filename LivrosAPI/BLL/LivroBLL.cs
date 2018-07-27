@@ -7,11 +7,11 @@ using System.Collections.Generic;
 
 namespace BLL
 {
-    public class LivroBLL: ILivroBLL
+    public class LivroBLL
     {
-        private readonly ILivroDAL _livroDAL = new LivroDAL();
+        private LivroDAL _livroDAL = new LivroDAL();
 
-        List<Livro> ILivroBLL.ListaLivros()
+        public List<Livro> ListaLivros()
         {
             return _livroDAL.ListaLivros();
         }
